@@ -40,7 +40,7 @@ app.get("*", (req, res) => {
   res.send("Error found");
 });
 
-app.post("/suggestion", async (req, res) => {
+app.post("/feedback", async (req, res) => {
   try {
     const userInfo = new Suggestion({
       name: req.body.name,
