@@ -45,7 +45,7 @@ app.post("/feedback", async (req, res) => {
     const userInfo = new Suggestion({
       name: req.body.name,
       email: req.body.email,
-      suggestion: req.body.suggestion,
+      feedback: req.body.feedback,
     });
     const registered = await userInfo.save();
     res.render("index");
