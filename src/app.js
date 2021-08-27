@@ -2,8 +2,9 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 
-require("./db/connect");
-const Suggestion = require("./model/schema");
+// DATABASE CODE:
+// require("./db/connect");
+// const Suggestion = require("./model/schema");
 
 const app = express();
 
