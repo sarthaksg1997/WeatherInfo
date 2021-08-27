@@ -1,23 +1,9 @@
 const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
-const mongoose = require("mongoose");
 
-const DB ='mongodb+srv://dbweather:dbweatherinfo@cluster0.izbwa.mongodb.net/weather?retryWrites=true&w=majority'
-
-mongoose.connect(DB,{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true, 
-  useFindAndModify:false
-}).then(()=>{
-  console.log('connection succesful');
-}).catch((err)=>{
-  console.log(err);
-})
-
-// require("./db/connect");
-// const Suggestion = require("./model/schema");
+require("./db/connect");
+const Suggestion = require("./model/schema");
 
 const app = express();
 
